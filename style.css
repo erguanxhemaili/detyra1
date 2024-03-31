@@ -1,11 +1,13 @@
 * {
     margin: 0px;
-    width: 100%px;
+    
 
 }
 
 body {
     background-color: #fdf5e6;
+    
+    font-family: "Inconsolata", sans-serif;
 }
 
 .navbar {
@@ -17,7 +19,6 @@ body {
     height: 10px;
     padding: 20px;
     justify-content: space-around;
-    text-decoration:none;
     position: fixed;
     top: 0;
 
@@ -26,6 +27,7 @@ body {
         font-optical-sizing: auto;
         font-weight: 600;
         color: white;
+        text-decoration: none;
 
         &:hover {
             color: rgb(153, 114, 42);
@@ -60,26 +62,27 @@ body {
     text-align: center;
 }
 
-.address, .opening-hours {
+.address,
+.opening-hours {
     position: absolute;
     margin: 6px 24px;
     bottom: 0;
-    padding: 12px 6px !important;
+    padding: 12px 6px;
     background-color: black;
     color: white;
-    font-family: Verdana, sans-serif;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
 }
 
 .address {
     right: 0;
-    background: none !important;
+    background: none;
 }
 
 
 .opening-hours {
     left: 0;
 }
-
 
 .section {
     padding: 35px 0 15px 0;
@@ -96,7 +99,10 @@ body {
     background-color: black;
     padding: 4px;
     color: white;
+    font-size: 18px;
+    letter-spacing: 4px;
 }
+
 
 .section-content {
     width: 50%;
@@ -111,12 +117,16 @@ body {
     border-left: 4px solid rgb(131, 130, 130);
     margin-top: 24px;
     padding: 20px 4px;
+    font-family: "Inconsolata", sans-serif;
 }
 
-.image-container {
+.image-container, .first-image {
     margin-top: 24px;
     overflow: clip;
+    width: 100%;
+
 }
+
 
 .second-image {
     height: 600px;
@@ -130,13 +140,14 @@ body {
     padding: 20px 5px;
 }
 
-.menu-item-title, .menu-item-description {
+.menu-item-title,
+.menu-item-description {
     padding: 4px;
 }
 
 .menu-container {
     margin-bottom: 24px;
-    box-shadow: 2px 5px 0 rgba(0,0,0,-0.84), 0 2px 10px 0 rgba(0,0,0,0.12);
+    box-shadow: 2px 5px 0 rgba(0, 0, 0, -0.84), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .location-address {
@@ -164,12 +175,127 @@ body {
 
 .submit-form-button {
     color: white;
-    background-color: black;
+    background-color: #000000;
     padding: 10px;
     margin-top: 8px;
     border: 0;
+
+    &:hover {
+        
+        color: bisque;
+        transition: ease-in;
+        cursor: pointer;
+    }
 }
 
+.footer{
+    background-color: black;
+   
+    
+}
+
+.footer-container{
+    padding-top: 10px;
+        /* padding: 70px  30px 20px; */
+        
+}
+
+.socialicons {
+    display: flex;
+    justify-content: center;
+  
+}
+.socialicons a{
+        text-decoration: none;
+        padding: 10px;
+        background-color: white;
+        margin: 10px;
+        border-radius: 50%;
+}
+
+.socialicons a i{
+    font-size: 32px;
+    color: black;
+    opacity: 0.9;
+}
+
+.socialicons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+
+.socialicons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+
+
+
+
+
+ .footer-navbar{
+    margin: 30px 0;
+}
+
+.footer-navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-right: 50px;
+}
+
+.footer-navbar ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 21px;
+    opacity: 0.7;
+    transition: 0.5s;
+    
+}
+
+.footer-navbar ul li a:hover{
+    opacity: 1;
+}
+
+.footer-bottom {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;   
+
+} 
+
+.footer-bottom p{
+    color: white;
+}
+
+
+.footer-bottom{
+    text-align: center;
+    color: white;
+    opacity: 0.7s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+
+}
+
+.designer{
+    opacity: 0.7s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+
+
+
+
+
+
+
+/* Per telefon*/
 @media screen and (max-width: 768px) {
     .section-content {
         width: 90%;
@@ -179,10 +305,41 @@ body {
         bottom: 40px;
         left: 0;
     }
+
+    .caffee-name{
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+    .second-image{
+        height: 300px;
+    }
+   
+    a{
+      margin-right: 30px; 
+    }
+
+    .footer-navbar ul{
+        flex-direction: column;
+
+    }
+    .footer-navbar ul li{
+        width: 100%;
+        text-align: center;
+        margin: 10px;
+    }
+
+    .socialicons{
+        display: flex;
+    }
 }
 
-@media screen and (max-width: 767px) {}
+/* Per ipad*/
+@media screen and (max-width: 1024px) {
 
+    
+}
+
+/* Per desktop*/
 @media screen and (max-width: 1200px) {
     .section-content {
         width: 90%;
